@@ -1,0 +1,29 @@
+// Tests Compound Concatenation                                                                                      
+
+#include "string.hpp"
+#include <cassert>
+#include <iostream>
+
+int main() {
+
+  {
+    // TEST                                                                                  
+
+    String str1("abc"), str2("def");
+    str1 += str2;
+
+    // VERIFY                                                                                  
+
+    assert(str1 == "abcdef");
+  }
+
+  {
+    // TEST
+    String str1("Hello!"), str2;
+    str1 += str2;
+    // VERIFY
+    assert(str1 == "Hello!");
+
+  std::cout << "Done testing ." << std::endl;
+
+}

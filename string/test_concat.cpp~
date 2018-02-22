@@ -1,0 +1,25 @@
+// Tests String concatenation                                                                                      
+
+#include "string.hpp"
+#include <cassert>
+#include <iostream>
+
+int main() {
+
+  {
+    // Setup
+    String str1,
+      str2('q'),
+      result;
+        
+    // Test
+    result = str1 + str2;
+        
+    // Verify
+    assert(str1 == "\0");
+    assert(str2 == "q");
+    assert(result == "q");
+  }
+  std::cout << "Done testing ." << std::endl;
+
+}

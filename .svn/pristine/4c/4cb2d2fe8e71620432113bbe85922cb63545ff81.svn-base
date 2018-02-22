@@ -1,0 +1,19 @@
+// Tests                                                                                       
+
+#include "string.hpp"
+#include <cassert>
+#include <iostream>
+
+int main() {
+
+  {
+    // TEST                                                                                    
+
+    // VERIFY                                                                                  
+
+    assert();
+  }
+
+  std::cout << "Done testing ." << std::endl;
+
+}

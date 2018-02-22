@@ -1,0 +1,18 @@
+/*
+ * Tests Default Constructor for Stack class 
+ */
+
+#include <iostream>
+#include <cassert>
+#include "stack.hpp"
+#include "../string/string.hpp"
+
+int main() {
+
+  {
+    stack<String> cleanStack;
+    assert(cleanStack.empty() == true);
+  }
+
+  std::cout << "Done testing Default Constructor-------" << std::endl;
+}

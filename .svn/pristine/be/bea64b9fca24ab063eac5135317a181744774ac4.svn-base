@@ -1,0 +1,26 @@
+// Tests split function for String class
+
+#include "string.hpp"
+#include <iostream>
+#include <vector>
+#include <cassert>
+
+int main() {
+
+  {
+    // SETUP
+    String str("abc ef gh");
+    
+    // TEST
+    str.split(' ');
+    std::cout << str.split(' ')[0] << std::endl;
+    std::cout << str.split(' ')[1] << std::endl;
+    std::cout << str.split(' ')[2] << std::endl;
+
+    // VERIFY
+    assert(str.split(' ')[0] == "abc");
+
+
+  }
+  
+}

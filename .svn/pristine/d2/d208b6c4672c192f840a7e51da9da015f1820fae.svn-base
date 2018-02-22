@@ -1,0 +1,23 @@
+// Tests accessor function for String class                                                                                     
+
+#include "string.hpp"
+#include <cassert>
+#include <iostream>
+
+int main() {
+
+  {
+    // TEST                                                
+                                   
+    String str("abc");
+
+    // VERIFY                                               
+    
+    assert(str[0] == 'a');
+    std:: cout << "Accessing str[1]. It is " << str[1] << std::endl;
+
+  }
+
+  std::cout << "Done testing accessor." << std::endl;
+
+}

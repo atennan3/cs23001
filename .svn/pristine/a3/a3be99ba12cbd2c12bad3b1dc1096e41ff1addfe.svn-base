@@ -1,0 +1,39 @@
+/*                                                                               Andrew Tennant
+
+  utilities.cpp
+
+  Contains utility functions for stack class
+
+*/
+
+#include "utilities.hpp"
+#include "stack.hpp"
+#include "../string/string.hpp"
+#include <iostream>
+#include <fstream>
+
+void toPostfix(std::ifstream& in, std::ostream& out) {
+  
+  stack<String> stk;
+  String left, right, oper, currentToken;
+
+
+  while(!in.eof()) {
+    in >> currentToken;
+
+    if(in.eof()) {
+      break;
+    }
+
+    while(currentToken != ";") {
+      if (currentToken == ")"){
+	right = stk.pop();
+	oper = stk.pop();
+	left = stk.pop();
+	stk.push(left + right + oper);
+      } else if (currentToken != "(") stk.push(currentToken);
+      in >> currentToken;
+    }
+    out << stk.pop() << std::endl;
+  }
+}

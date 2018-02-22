@@ -1,0 +1,25 @@
+//
+//  functions.cpp
+//  Lab 4
+//
+//  Created by Andrew Tennant on 9/21/17.
+//  Copyright © 2017 Andrew Tennant. All rights reserved.
+//
+#include <iostream>
+#include <fstream>
+
+
+#include "functions.hpp"
+
+void readUntilSpace() {
+  std::ifstream file ("fileio-data-1.txt");
+  if(!file.is_open()) {
+    std::cout << "Unable to open file\n";
+    return;
+  }
+    
+  char ch;
+  while (file >> ch) {
+    std::cout << ch;
+  }
+}

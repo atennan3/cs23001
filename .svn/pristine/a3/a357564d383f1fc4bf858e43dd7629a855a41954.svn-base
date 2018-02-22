@@ -1,0 +1,21 @@
+// Tests Relational Operators                                                                                       
+
+#include "string.hpp"
+#include <cassert>
+#include <iostream>
+
+int main() {
+
+  {
+    // TEST                
+
+    String str1('b'), str2('a');
+
+    // VERIFY                                                                                  
+    assert(str1 > str2);
+    assert(str2 < str1);
+  }
+
+  std::cout << "Done testing compound operators." << std::endl;
+
+}

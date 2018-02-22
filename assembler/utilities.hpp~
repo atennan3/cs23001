@@ -1,0 +1,12 @@
+// utilities.hpp
+// Function prototype for postfix conversion
+
+
+#ifndef UTILITIES_HPP
+#define UTILITIES_HPP
+
+#include <fstream>
+
+void toPostfix(std::ifstream&, std::ostream&);
+
+#endif

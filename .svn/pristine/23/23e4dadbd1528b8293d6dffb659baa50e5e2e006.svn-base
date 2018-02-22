@@ -1,0 +1,4 @@
+-String-
+Part1: 72 Need more test cases. Test every function that you have to make. Group related functions into single files to cut down on the number of files you must create.
+Part2: 60 Tests fail at concat. operator. No oracles in test oracle folder.
+Part3: 50 test_split.cpp fails, not comprehensive enough. Make more cases

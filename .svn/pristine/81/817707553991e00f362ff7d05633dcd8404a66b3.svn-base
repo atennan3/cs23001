@@ -1,0 +1,5 @@
+Andrew Tennant
+
+CS23001 - Section 1
+
+Two functions that stand out in the report are LESS_THAN() and SWAP(). They each used a cumulative total of 7.84 and 5.79 seconds respectively. I think the cause may be due to the sheer amount of time each function had to be called; LESS_THAN() was called 312,487,500 times and SWAP was called 155,897,697 times. 

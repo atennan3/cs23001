@@ -1,0 +1,40 @@
+// Tests cout
+
+#include "string.hpp" 
+#include <cassert>
+
+//===========================================================================
+int main ()
+{
+  {
+    // Setup
+    String str1 = "It's over 9000";
+
+    // Test & Verify
+    std::cout << str1 << std::endl;
+  }
+
+  {
+    // Setup
+    String str1 = "a";
+
+    // Test & Verify
+    std::cout << str1 << std::endl;
+  }
+
+  {
+    // Setup
+    String str1 = "This is line 1.\nThis is line 2.";
+
+    // Test & Verify
+    std::cout << str1 << std::endl;
+  }
+
+  {
+    // Setup
+    String str1;
+
+    // Test & Verify
+    std::cout << str1 << std::endl;
+  }
+}

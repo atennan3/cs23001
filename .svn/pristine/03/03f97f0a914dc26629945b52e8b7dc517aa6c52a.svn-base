@@ -1,0 +1,65 @@
+/*
+  test_push_pop.cpp
+
+  Tests push and pop functions on a stack of int and String.
+
+*/
+
+#include "stack.hpp"
+#include "../string/string.hpp"
+#include <iostream>
+#include <cassert>
+
+int main() {
+
+  {
+    stack<int> test;
+
+    test.push(1);
+    assert(test.top() == 1); 
+
+    test.push(2);
+    assert(test.top() == 2);
+    
+    test.push(3);
+    assert(test.top() == 3);
+    
+    test.push(4);
+    assert(test.top() == 4);
+
+    test.push(5);
+    assert(test.top() == 5);
+    
+    assert(test.pop() == 5);
+    assert(test.top() == 4);
+
+    // Ensure test isn't empty
+    assert(!test.empty());
+
+    std::cout << "-Push and Pop for int passed.\n\n";
+  }
+
+  {
+    stack<String> test;
+    
+    test.push("foo");
+    assert(test.top() == "foo");
+
+    test.push("bar");
+    assert(test.top() == "bar");
+
+    test.push("");
+    assert(test.top() == "");
+
+    assert(test.pop() == "");
+    assert(test.top() == "bar");
+
+    // Ensure test isn't empty
+    assert(!test.empty());
+
+    std::cout << "-Push and Pop for String passed.\n\n";
+  }
+
+  std::cout << "Done testing Push and Pop.\n\n";
+  
+}

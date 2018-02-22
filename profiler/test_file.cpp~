@@ -1,0 +1,28 @@
+// Andrew Tennant
+// test_file.cpp
+// Tests copy copy constructor, destructor, swap, and assignment for ASTree data type.
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+#include "ASTree.hpp"
+
+////////////////////////////////////////////////////////////////////////////////                    
+// Simple function to exercise/test copy-ctor, dtor, swap, assignment.                              
+void testCopyAssign(srcML p) {
+  std::cout << "The orginal code: " <<std::endl;
+  std::cout << "------------------------------------------------" <<std::endl;
+  std::cout << p;   //Should print out same code as printed in main.                               
+  std::cout << "------------------------------------------------" <<std::endl;
+  std::cout << "No code: " <<std::endl;
+  p = srcML();      //Should print out nothing.                                                    
+  std::cout << p;
+  std::cout << "------------------------------------------------" <<std::endl;
+}
+
+int main() {
+
+}

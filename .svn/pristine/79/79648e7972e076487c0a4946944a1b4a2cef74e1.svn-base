@@ -1,0 +1,68 @@
+/*                                                                              
+  test_ctor default.cpp
+
+  Tests the copy constructor for String and int stacks.
+*/
+
+#include "stack.hpp"
+#include "../string/string.hpp"
+#include <iostream>
+#include <cassert>
+
+int main() {
+  {
+    stack<int> test;
+    int first = 1, second = 2, third = 3;
+
+    // Testing initialization to an empty stack.
+    stack<int> copy(test);
+    assert(copy.empty());
+
+    // Testing initialization of a stack filled with values
+    test.push(first);
+    test.push(second);
+    test.push(third);
+
+    stack<int> testCopy(test);
+    
+    assert(!testCopy.empty());
+    assert(testCopy.top() == third);
+    
+    testCopy.pop();
+    assert(testCopy.top() == second);
+
+    testCopy.pop();
+    assert(testCopy.top() == first);
+
+    std::cout << "-Copy constructor for int stack passed.\n\n";
+  }
+
+  {
+    stack<String> test;
+    String first = "first", second = "second", third = "third";
+
+    // Testing initialization to an empty stack.                                
+    stack<String> copy(test);
+    assert(copy.empty());
+
+    // Testing initialization of a stack filled with values                     
+    test.push(first);
+    test.push(second);
+    test.push(third);
+
+    stack<String> testCopy(test);
+
+    assert(!testCopy.empty());
+    assert(testCopy.top() == third);
+
+    testCopy.pop();
+    assert(testCopy.top() == second);
+
+    testCopy.pop();
+    assert(testCopy.top() == first);
+
+    std::cout << "-Copy constructor for String stack passed\n\n";
+  }
+
+  std::cout << "-Done testing copy constructor.\n\n";
+}

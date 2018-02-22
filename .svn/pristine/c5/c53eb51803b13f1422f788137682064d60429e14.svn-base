@@ -1,0 +1,42 @@
+/*
+ * Tests Default Constructor for Stack class 
+ */
+
+#include <iostream>
+#include <cassert>
+#include "stack.hpp"
+#include "../string/string.hpp"
+
+int main() {
+
+  {
+    stack<int> emptyintStack;
+    assert(emptyintStack.empty());
+  }
+
+  {
+    stack<String> emptyStringStack;
+    assert(emptyStringStack.empty());
+  }
+
+  {
+    stack<String> stringStack;
+    assert(stringStack.empty());
+
+    stringStack.push("Hello!");
+    assert(stringStack.top() == "Hello!");
+    assert(!stringStack.empty());
+    
+  }
+
+  {
+    stack<int> intStack;
+    assert(intStack.empty());
+
+    intStack.push(1);
+    assert(intStack.top() == 1);
+    assert(!intStack.empty());
+  }
+
+  std::cout << std:: endl << "Done testing Default Constructor-------" << std::endl;
+}
